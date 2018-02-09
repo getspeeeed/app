@@ -6,8 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import firebase from 'firebase';
 import { firebaseConfig } from './firebase-config.js';
 
-export const firebaseApp = firebase.initializeApp(firebaseConfig);
-export const firebaseDb = firebaseApp.database();
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
