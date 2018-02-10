@@ -16,19 +16,19 @@ class PasswordReset extends Component {
     super(props);
     this.state = {
       open: false,
+      message: ""
     };
   }
 
-  handleClick = (message) => {
-    this.setState({
-      open: true,
-      message: message,
-    });
+  handleClick = (state) => {
+    state.open = true;
+    this.setState(state);
   };
 
   handleRequestClose = () => {
     this.setState({
       open: false,
+      message: "aa"
     });
   };
 
@@ -48,8 +48,18 @@ class PasswordReset extends Component {
   sendemail = ( event ) => {
     const self = this;
     const email = document.getElementById( 'email' ).value;
-    firebase.auth().sendPasswordResetEmail(email).catch(function(error) {
-      self.handleClick(error.message)
+    firebase.auth().sendPasswordResetEmail(email).then(() => {
+      self.handleClick({
+        message: "Check your email for a link to reset your password.",
+        style: {}
+      })
+    }).catch((error) => {
+      self.handleClick({
+        message: error.message,
+        style: {
+          backgroundColor: '#ff0000'
+        }
+      })
     });
   }
 
@@ -74,7 +84,7 @@ class PasswordReset extends Component {
             message={ this.state.message }
             autoHideDuration={ 4000 }
             onRequestClose={ this.handleRequestClose }
-            bodyStyle={ this.snackbar_style }
+            bodyStyle={ this.state.style }
           />
         </div>
       </MuiThemeProvider>
