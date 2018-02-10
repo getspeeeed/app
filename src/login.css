@@ -1,24 +1,10 @@
-html,
-body
-{
-  height: 100%;
-  color: #ffffff;
-  background-size: cover;
-  background-color: #333333;
-}
-
-a
-{
-  color: #ffffff;
-  text-decoration: none;
-}
-
-#root
+.login
 {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #333333;
 }
 
 .login-form
