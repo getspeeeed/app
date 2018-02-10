@@ -1,5 +1,16 @@
-body {
+body
+{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.small
+{
+  font-size: 0.8rem;
+}
+
+.center
+{
+    text-align: center;
 }

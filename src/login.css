@@ -1,4 +1,61 @@
-input
+html,
+body
 {
-  border: 1px solid #FF0000;
+  height: 100%;
+  color: #ffffff;
+  background-size: cover;
+  background-color: #333333;
+}
+
+a
+{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#root
+{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form
+{
+  box-sizing: border-box;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+}
+
+.login-form h1
+{
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.signin
+{
+  margin-top: 16px;
+}
+
+.logo
+{
+  display: block;
+  max-width: 90%;
+  max-height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-footer
+{
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
