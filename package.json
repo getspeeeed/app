@@ -15,7 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "npm run build && firebase deploy",
+    "browse": "open http://localhost:3000/"
   },
   "devDependencies": {
     "firebase": "^4.9.1"
