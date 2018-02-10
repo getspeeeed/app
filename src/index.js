@@ -9,7 +9,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import './index.css';
 import App from './app';
-import Login from './login';
+import Signin from './signin';
 
 firebase.initializeApp(firebaseConfig);
 injectTapEventPlugin();
@@ -19,6 +19,6 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     ReactDOM.render(<App />, document.getElementById('root'));
   } else {
-    ReactDOM.render(<Login />, document.getElementById('root'));
+    ReactDOM.render(<Signin />, document.getElementById('root'));
   }
 });

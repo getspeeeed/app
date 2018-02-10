@@ -29,3 +29,8 @@ a
 {
   height: 100%;
 }
+
+input:invalid
+{
+  box-shadow: none;
+}
