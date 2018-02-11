@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom'
-
 import './SigninForm.css';
-
 import { RaisedButton, TextField, FlatButton } from 'material-ui';
-
 import firebase from 'firebase';
 
 class SigninForm extends Component {
@@ -43,14 +39,8 @@ class SigninForm extends Component {
           <p className="small center"><FlatButton label="Forgot your password?" labelStyle={ this.style } onClick={ this.resetform } /></p>
         </div>
         <div className="login-footer">
-          <RaisedButton className="signup" label="Create your account" secondary={true} style={ { margin: "1em 0" } } />
+          <RaisedButton className="signup" label="Create your account" secondary={true} style={ { margin: "1em 0" } } onClick={ () => { window.location.href = "/#siginup" } } />
         </div>
-        <BrowserRouter>
-        <div>
-        <Route path="/" />
-        <Route path="/world" render={props => <div>hello</div>} />
-        </div>
-        </BrowserRouter>
       </div>
     );
   }
