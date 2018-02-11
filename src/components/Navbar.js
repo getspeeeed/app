@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppBar, MenuItem, Drawer, IconButton } from 'material-ui';
+import { AppBar, MenuItem, Drawer } from 'material-ui';
 
 import firebase from 'firebase';
 
