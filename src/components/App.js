@@ -15,7 +15,6 @@ class App extends Component {
       open: false,
       message: "",
       user: null,
-      loading: true,
     };
   }
 
@@ -46,12 +45,10 @@ class App extends Component {
       if (user) {
         this.setState({
           user: user,
-          loading: false,
         })
       } else {
         this.setState({
           user: user,
-          loading: false
         })
       }
     })
