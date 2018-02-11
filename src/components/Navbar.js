@@ -7,9 +7,7 @@ const signout = function( e ) {
   firebase.auth().signOut();
 }
 
-const style = {
-  backgroundColor: "#333333"
-}
+const style = {}
 
 class NavBar extends Component {
   render() {
