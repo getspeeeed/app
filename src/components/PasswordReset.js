@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import './SigninForm.css';
-
 import { RaisedButton, TextField, FlatButton } from 'material-ui';
-
 import firebase from 'firebase';
 
 class PasswordReset extends Component {
