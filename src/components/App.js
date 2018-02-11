@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import firebase from 'firebase';
 import { firebaseConfig } from '../firebase-config.js';
 import Main from './Main';
@@ -65,7 +67,7 @@ class App extends Component {
       return null;
     } else if (this.state.user) {
       return (
-        <MuiThemeProvider>
+        <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
           <div id="container">
             <Main Alert={this.Alert} Info={this.Info} />
             <Snackbar
@@ -80,7 +82,7 @@ class App extends Component {
       );
     } else {
       return (
-        <MuiThemeProvider>
+        <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
           <div id="container">
             <Signin Alert={this.Alert} Info={this.Info} />
             <Snackbar
