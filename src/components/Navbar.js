@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { AppBar, MenuItem, Drawer } from 'material-ui';
 
 import firebase from 'firebase';
@@ -15,7 +14,6 @@ const style = {
 class NavBar extends Component {
   render() {
     return (
-      <MuiThemeProvider>
         <div>
           <Drawer
             docked={false}
@@ -31,7 +29,6 @@ class NavBar extends Component {
             style={ style }
           />
         </div>
-      </MuiThemeProvider>
     );
   }
 }

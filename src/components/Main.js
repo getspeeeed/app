@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import NavBar from './navbar';
+import NavBar from './Navbar';
 
-class App extends Component {
+class Main extends Component {
   constructor() {
     super()
     this.state = {
@@ -25,4 +25,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Main;
