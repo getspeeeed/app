@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppBar, MenuItem, Drawer } from 'material-ui';
+import { AppBar, MenuItem, Drawer, IconButton } from 'material-ui';
 
 import firebase from 'firebase';
 
@@ -8,6 +8,8 @@ const signout = function( e ) {
 }
 
 const style = {}
+const titleStyle = {}
+const iconStyle = {}
 
 class NavBar extends Component {
   render() {
@@ -22,9 +24,13 @@ class NavBar extends Component {
             <MenuItem onClick={ signout }>Sign Out</MenuItem>
           </Drawer>
           <AppBar
+            className="navbar"
             title="Speeeed"
             onLeftIconButtonClick={() => this.props.onToggle()}
             style={ style }
+            titleStyle={ titleStyle }
+            iconStyleLeft={ iconStyle }
+            iconStyleRight={ iconStyle }
           />
         </div>
     );
