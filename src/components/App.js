@@ -67,7 +67,7 @@ class App extends Component {
       return (
         <MuiThemeProvider>
           <div id="container">
-            <Main Alert={this.Alert} Info={this.Info} />
+            <Main Alert={this.Alert} Info={this.Info} User={this.state.user} />
             <Snackbar
               open={ this.state.open }
               message={ this.state.message }
