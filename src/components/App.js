@@ -36,6 +36,12 @@ class App extends Component {
     });
   };
 
+  CloseBar = () => {
+    this.setState({
+      open: false,
+    });
+  };
+
   snackbar_style = {
     backgroundColor: "#ff0000"
   }
@@ -83,7 +89,7 @@ class App extends Component {
               open={ this.state.open }
               message={ this.state.message }
               autoHideDuration={ 4000 }
-              onRequestClose={ this.handleRequestClose }
+              onRequestClose={ this.CloseBar }
               bodyStyle={ this.state.style }
             />
           </div>
