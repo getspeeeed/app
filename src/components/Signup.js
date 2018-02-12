@@ -4,6 +4,13 @@ import firebase from 'firebase';
 import PasswordField from './PasswordField'
 
 class Signup extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      disableSignIn: true,
+    };
+  }
+
   style = {
     color: "#ffffff",
     textTransform: "none",
@@ -59,7 +66,7 @@ class Signup extends Component {
               label="SIGN UP"
               backgroundColor="#FFC107"
               fullWidth={true}
-              onClick={ this.signup }
+              onClick={this.signup}
             />
             <p className="small">By clicking [SIGN UP], you agree to our terms of service and privacy policy.
               We’ll occasionally send you account related emails.</p>

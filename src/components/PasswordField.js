@@ -27,7 +27,6 @@ class PasswordField extends Component {
   }
 
   setIconStyle = () => {
-
     const style = {
       position: 'absolute',
       top: "50%",
@@ -46,17 +45,38 @@ class PasswordField extends Component {
       icon = <Show fill={this.props.iconColor} onClick={this.toggleReveal} />
     }
 
+    // See http://www.material-ui.com/#/components/text-field
     return (
       <div style={{position: "relative"}}>
         <TextField
-          id={this.props.id}
-          type={this.state.inputType}
-          name={this.props.name}
+          ref="passwordField"
           className={this.props.className}
-          hintText={this.props.hintText}
+          defaultValue={this.props.defaultValue}
+          disabled={this.props.disabled}
+          errorStyle={this.props.errorStyle}
+          errorText={this.props.errorText}
+          floatingLabelFixed={this.props.floatingLabelFixed}
+          floatingLabelFocusStyle={this.props.floatingLabelFocusStyle}
+          floatingLabelShrinkStyle={this.props.floatingLabelShrinkStyle}
+          floatingLabelStyle={this.props.floatingLabelStyle}
+          floatingLabelText={this.props.floatingLabelText}
           fullWidth={this.props.fullWidth}
-          inputStyle={this.props.inputStyle}
           hintStyle={this.props.hintStyle}
+          hintText={this.props.hintText}
+          id={this.props.id}
+          inputStyle={this.props.inputStyle}
+          multiLine={this.props.multiLine}
+          name={this.props.name}
+          onChange={this.props.onChange}
+          rows={this.props.rows}
+          rowsMax={this.props.rowsMax}
+          style={this.props.style}
+          textareaStyle={this.props.textareaStyle}
+          type={this.state.inputType}
+          underlineDisabledStyle={this.props.underlineDisabledStyle}
+          underlineFocusStyle={this.props.underlineFocusStyle}
+          underlineShow={this.props.underlineShow}
+          underlineStyle={this.props.underlineStyle}
         />
         <div style={this.setIconStyle()}>{icon}</div>
       </div>
