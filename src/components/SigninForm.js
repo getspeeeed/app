@@ -38,7 +38,13 @@ class SigninForm extends Component {
           <p className="small center"><FlatButton label="Forgot your password?" labelStyle={ this.style } onClick={ this.resetform } /></p>
         </div>
         <div className="login-footer">
-          <RaisedButton className="signup" label="Create your account" secondary={true} style={ { margin: "1em 0" } } onClick={ () => { window.location.href = "/#siginup" } } />
+          <RaisedButton
+            className="signup"
+            label="Create your account"
+            secondary={true}
+            style={ { margin: "1em 0" } }
+            onClick={ () => { window.location.href = "/#signup" } }
+          />
         </div>
       </div>
     );

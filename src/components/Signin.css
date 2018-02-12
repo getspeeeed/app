@@ -5,12 +5,13 @@
   justify-content: center;
   align-items: center;
   background-color: #333333;
+  color: #ffffff;
 }
 
 .login-form
 {
   box-sizing: border-box;
-  max-width: 300px;
+  max-width: 310px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 40px;
@@ -44,4 +45,9 @@
   left: 0;
   width: 100%;
   text-align: center;
+}
+
+.small
+{
+  color: #cccccc;
 }

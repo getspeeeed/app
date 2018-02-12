@@ -22,10 +22,6 @@ class PasswordReset extends Component {
     });
   }
 
-  signin = ( event ) => {
-    window.location.hash = ""
-  }
-
   render() {
     return (
       <div className="login">
@@ -35,7 +31,9 @@ class PasswordReset extends Component {
             <TextField id="email" type="email" hintText="Email" fullWidth={true} inputStyle={ this.style } hintStyle={ this.hint_style } />
             <RaisedButton className="signin" label="Send password reset email" primary={true} fullWidth={true} onClick={ this.sendemail } />
           </form>
-          <p className="small center"><FlatButton label="Sign in" labelStyle={ this.style } onClick={ this.signin } /></p>
+          <p className="small center">
+            <FlatButton label="Sign in" labelStyle={ this.style } onClick={ () => { window.location.hash = "" } } />
+          </p>
         </div>
       </div>
     );
