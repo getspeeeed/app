@@ -1,30 +1,39 @@
 import React, { Component } from 'react';
 import { AppBar, MenuItem, Drawer } from 'material-ui';
-
 import firebase from 'firebase';
 
 const signout = function( e ) {
   firebase.auth().signOut();
 }
 
-const style = {}
+const style = {
+  backgroundColor: "#333333",
+}
 const titleStyle = {}
 const iconStyle = {}
+const containerStyle = {
+  backgroundColor: "#666666",
+  color: "#ffffff",
+}
+const MenuItemStyle = {
+  color: "#ffffff",
+}
 
 class NavBar extends Component {
   render() {
     return (
         <div>
           <Drawer
+            className="navbar"
             docked={false}
             width={200}
             open={this.props.open}
             onRequestChange={() => this.props.onToggle()}
+            containerStyle={ containerStyle }
           >
-            <MenuItem onClick={ signout }>Sign Out</MenuItem>
+            <MenuItem onClick={ signout } style={ MenuItemStyle }>Sign Out</MenuItem>
           </Drawer>
           <AppBar
-            className="navbar"
             title="Speeeed"
             onLeftIconButtonClick={() => this.props.onToggle()}
             style={ style }

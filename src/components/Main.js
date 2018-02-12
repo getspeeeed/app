@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import NavBar from './Navbar';
 
+import './Main.css';
+
 class Main extends Component {
   constructor() {
     super()
