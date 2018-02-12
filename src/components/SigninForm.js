@@ -32,8 +32,25 @@ class SigninForm extends Component {
         <div className="login-form">
           <h1><img src="./img/logo-white.png" alt="Speeeed" className="logo" /></h1>
           <form>
-            <TextField id="email" type="email" hintText="Email" fullWidth={true} inputStyle={ this.style } hintStyle={ this.hint_style } required />
-            <PasswordField id="password" type="password" hintText="Password" fullWidth={true} inputStyle={ this.style } hintStyle={ this.hint_style } required />
+            <TextField
+              id="email"
+              type="email"
+              hintText="Email"
+              fullWidth={true}
+              inputStyle={ this.style }
+              hintStyle={ this.hint_style }
+              required
+            />
+            <PasswordField
+              id="password"
+              type="password"
+              hintText="Password"
+              fullWidth={true}
+              inputStyle={ this.style }
+              hintStyle={ this.hint_style }
+              iconColor="#ffffff"
+              required
+            />
             <RaisedButton className="signin" label="SIGN IN" primary={true} fullWidth={true} onClick={ this.signin } />
           </form>
           <p className="small center"><FlatButton label="Forgot your password?" labelStyle={ this.style } onClick={ this.resetform } /></p>
