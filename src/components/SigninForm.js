@@ -41,7 +41,7 @@ class SigninForm extends Component {
           <RaisedButton
             className="signup"
             label="Create your account"
-            secondary={true}
+            backgroundColor="#FFC107"
             style={ { margin: "1em 0" } }
             onClick={ () => { window.location.href = "/#signup" } }
           />

@@ -29,7 +29,7 @@ class PasswordReset extends Component {
           <h1><img src="./img/logo-white.png" alt="Speeeed" className="logo" /></h1>
           <form>
             <TextField id="email" type="email" hintText="Email" fullWidth={true} inputStyle={ this.style } hintStyle={ this.hint_style } />
-            <RaisedButton className="signin" label="Send password reset email" primary={true} fullWidth={true} onClick={ this.sendemail } />
+            <RaisedButton className="signin" label="Send password reset email" backgroundColor="#FFC107" fullWidth={true} onClick={ this.sendemail } />
           </form>
           <p className="small center">
             <FlatButton label="Sign in" labelStyle={ this.style } onClick={ () => { window.location.hash = "" } } />

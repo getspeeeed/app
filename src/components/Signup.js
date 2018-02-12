@@ -57,7 +57,7 @@ class Signup extends Component {
             <RaisedButton
               className="signin"
               label="SIGN UP"
-              primary={true}
+              backgroundColor="#FFC107"
               fullWidth={true}
               onClick={ this.signup }
             />
