@@ -12,11 +12,11 @@ const style = {
 const titleStyle = {}
 const iconStyle = {}
 const containerStyle = {
-  backgroundColor: "#666666",
-  color: "#ffffff",
+  backgroundColor: "#f5f5f5",
+  color: "#555555",
 }
 const MenuItemStyle = {
-  color: "#ffffff",
+  color: "#555555",
 }
 
 class NavBar extends Component {
