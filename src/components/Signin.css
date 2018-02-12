@@ -1,29 +1,30 @@
-.login
+.signin
 {
   height: 100%;
+  width: 310px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #333333;
   color: #ffffff;
 }
 
-.login-form
+.signin-form
 {
   box-sizing: border-box;
-  max-width: 310px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   padding-bottom: 40px;
 }
 
-.login-form h1
+.signin-form h1
 {
   margin: 0;
   margin-bottom: 1em;
 }
 
-.signin
+.signin .btn-signin
 {
   margin-top: 16px;
 }
@@ -38,7 +39,7 @@
   margin-right: auto;
 }
 
-.login-footer
+.signin-form .footer
 {
   position: absolute;
   bottom: 0px;

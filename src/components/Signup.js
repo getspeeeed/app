@@ -38,8 +38,8 @@ class Signup extends Component {
 
   render() {
     return (
-      <div className="login">
-        <div className="login-form">
+      <div className="signup">
+        <div className="main">
           <h1><img src="./img/logo-white.png" alt="Speeeed" className="logo" /></h1>
           <form>
             <TextField
@@ -62,7 +62,7 @@ class Signup extends Component {
               required
             />
             <RaisedButton
-              className="signin"
+              className="btn-signin"
               label="SIGN UP"
               backgroundColor="#FFC107"
               fullWidth={true}

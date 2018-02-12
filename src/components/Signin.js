@@ -15,15 +15,13 @@ class Signin extends Component {
 
   render() {
     return (
-      <div className="login">
-        <HashRouter>
-          <div>
-            <Route exact path="/" render={ () => <SigninForm  Alert={this.props.Alert} Info={this.props.Info} /> } />
-            <Route path="/reset-password" render={ () => <PasswordReset  Alert={this.props.Alert} Info={this.props.Info} /> } />
-            <Route path="/signup" render={ () => <Signup  Alert={this.props.Alert} Info={this.props.Info} /> } />
-          </div>
-        </HashRouter>
-      </div>
+      <HashRouter>
+        <div className="signin">
+          <Route exact path="/" render={ () => <SigninForm  Alert={this.props.Alert} Info={this.props.Info} /> } />
+          <Route path="/reset-password" render={ () => <PasswordReset  Alert={this.props.Alert} Info={this.props.Info} /> } />
+          <Route path="/signup" render={ () => <Signup  Alert={this.props.Alert} Info={this.props.Info} /> } />
+        </div>
+      </HashRouter>
     );
   }
 }
