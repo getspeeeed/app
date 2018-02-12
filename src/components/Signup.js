@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { RaisedButton, TextField, FlatButton, Checkbox } from 'material-ui';
+import { RaisedButton, TextField, FlatButton } from 'material-ui';
 import firebase from 'firebase';
+import PasswordField from './PasswordField'
 
 class Signup extends Component {
   style = {
     color: "#ffffff",
-    textTransform: "none"
+    textTransform: "none",
   }
 
   hint_style = {
@@ -17,17 +18,15 @@ class Signup extends Component {
     color: "#999999",
   }
 
-  signin = ( event ) => {
+  signup = ( event ) => {
     const self = this;
     const email = document.getElementById( 'email' ).value;
     const password = document.getElementById( 'password' ).value;
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(() => {
+      window.location.hash = ""
+    }).catch((error) => {
       self.props.Alert(error.message)
-    });
-  }
-
-  resetform = ( event ) => {
-    window.location.href = "/#reset-password"
+    })
   }
 
   render() {
@@ -45,15 +44,14 @@ class Signup extends Component {
               hintStyle={ this.hint_style }
               required
             />
-            <TextField
+            <PasswordField
               id="password"
               type="password"
               hintText="Password"
               fullWidth={ true }
               inputStyle={ this.style }
               hintStyle={ this.hint_style }
-              errorText="Use at least one letter, one numeral, and seven characters."
-              errorStyle={ this.errorStyle }
+              iconColor="#ffffff"
               required
             />
             <RaisedButton
@@ -61,9 +59,9 @@ class Signup extends Component {
               label="SIGN UP"
               primary={true}
               fullWidth={true}
-              onClick={ this.signin }
+              onClick={ this.signup }
             />
-            <p class="small">By clicking [SIGN UP], you agree to our terms of service and privacy policy.
+            <p className="small">By clicking [SIGN UP], you agree to our terms of service and privacy policy.
               We’ll occasionally send you account related emails.</p>
           </form>
           <p className="small center">

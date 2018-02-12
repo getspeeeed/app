@@ -17,7 +17,7 @@ class Main extends Component {
   }
   render() {
     return (
-      <div>
+      <div id="main">
         <NavBar
           onToggle={() => this.handleToggle()}
           open={this.state.open}

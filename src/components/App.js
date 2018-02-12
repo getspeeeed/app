@@ -66,7 +66,7 @@ class App extends Component {
     } else if (this.state.user) {
       return (
         <MuiThemeProvider>
-          <div id="container">
+          <div id="app">
             <Main Alert={this.Alert} Info={this.Info} User={this.state.user} />
             <Snackbar
               open={ this.state.open }
@@ -81,7 +81,7 @@ class App extends Component {
     } else {
       return (
         <MuiThemeProvider>
-          <div id="container">
+          <div id="app">
             <Signin Alert={this.Alert} Info={this.Info} />
             <Snackbar
               open={ this.state.open }
