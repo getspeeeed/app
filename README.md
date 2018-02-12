@@ -24,7 +24,7 @@ Install npm modules.
 $ npm install
 ```
 
-Run following command to start development local server.
+Run following command to start local development server.
 
 ```
 $ npm start
