@@ -46,6 +46,7 @@ class PasswordField extends Component {
     }
 
     // See http://www.material-ui.com/#/components/text-field
+    // Note: If it has a `value` attribute, hint text will be shown after input.
     return (
       <div style={{position: "relative"}}>
         <TextField
