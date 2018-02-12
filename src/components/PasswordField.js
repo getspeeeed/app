@@ -35,14 +35,15 @@ class PasswordField extends Component {
       width: "1.8rem",
       transform: "translateY(-50%)",
       cursor: "pointer",
+      zIndex: 10,
     }
     return Object.assign(style, this.props.iconStyle)
   }
 
   render() {
-    let icon = <Hide fill={this.props.iconColor} onClick={this.toggleReveal} />
+    let icon = <Hide fill={this.props.iconColor} />
     if (this.state.reveal) {
-      icon = <Show fill={this.props.iconColor} onClick={this.toggleReveal} />
+      icon = <Show fill={this.props.iconColor} />
     }
 
     // See http://www.material-ui.com/#/components/text-field
@@ -79,7 +80,7 @@ class PasswordField extends Component {
           underlineShow={this.props.underlineShow}
           underlineStyle={this.props.underlineStyle}
         />
-        <div style={this.setIconStyle()}>{icon}</div>
+        <div style={this.setIconStyle()} onClick={this.toggleReveal}>{icon}</div>
       </div>
     );
   }
