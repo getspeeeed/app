@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { TextField } from 'material-ui';
-import Show from 'genericons-neue-react/icons/show';
-import Hide from 'genericons-neue-react/icons/hide';
+import Show from 'material-ui/svg-icons/action/visibility';
+import Hide from 'material-ui/svg-icons/action/visibility-off';
 
 class PasswordField extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class PasswordField extends Component {
     };
   }
 
-  toggleReveal = () => {
+  toggleVisibility = () => {
     if (this.state.reveal) {
       this.setState({
         reveal: false,
@@ -31,8 +31,8 @@ class PasswordField extends Component {
       position: 'absolute',
       top: "50%",
       right: "0",
-      height: "1.8rem",
-      width: "1.8rem",
+      height: "1.6rem",
+      width: "1.6rem",
       transform: "translateY(-50%)",
       cursor: "pointer",
       zIndex: 10,
@@ -41,9 +41,9 @@ class PasswordField extends Component {
   }
 
   render() {
-    let icon = <Hide fill={this.props.iconColor} />
+    let icon = <Hide color={this.props.iconColor} />
     if (this.state.reveal) {
-      icon = <Show fill={this.props.iconColor} />
+      icon = <Show color={this.props.iconColor} />
     }
 
     return (
@@ -52,7 +52,7 @@ class PasswordField extends Component {
           {...this.props}
           type={this.state.inputType}
         />
-        <div style={this.setIconStyle()} onClick={this.toggleReveal}>{icon}</div>
+        <div style={this.setIconStyle()} onClick={this.toggleVisibility}>{icon}</div>
       </div>
     );
   }
