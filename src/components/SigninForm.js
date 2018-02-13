@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { RaisedButton, TextField, FlatButton } from 'material-ui';
-import PasswordField from './PasswordField'
+import PasswordField from 'password-field'
 import firebase from 'firebase';
 
 class SigninForm extends Component {
