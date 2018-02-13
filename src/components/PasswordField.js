@@ -7,40 +7,38 @@ class PasswordField extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      reveal: false,
+      visibility: false,
       inputType: "password",
     };
   }
 
   toggleVisibility = () => {
-    if (this.state.reveal) {
+    if (this.state.visibility) {
       this.setState({
-        reveal: false,
+        visibility: false,
         inputType: "password",
       })
     } else {
       this.setState({
-        reveal: true,
+        visibility: true,
         inputType: "text",
       })
     }
   }
 
-  setIconStyle = () => {
-    const style = {
+  render() {
+    const iconStyle = {
       position: 'absolute',
       top: "50%",
       right: "0",
       transform: "translateY(-50%)",
       cursor: "pointer",
+      ...this.props.iconStyle
     }
-    return Object.assign(style, this.props.iconStyle)
-  }
 
-  render() {
-    let icon = <Hide color={this.props.iconColor} style={this.setIconStyle()} onClick={this.toggleVisibility} />
-    if (this.state.reveal) {
-      icon = <Show color={this.props.iconColor} style={this.setIconStyle()} onClick={this.toggleVisibility} />
+    let icon = <Hide color={this.props.iconColor} style={iconStyle} onClick={this.toggleVisibility} />
+    if (this.state.visibility) {
+      icon = <Show color={this.props.iconColor} style={iconStyle} onClick={this.toggleVisibility} />
     }
 
     const props = {...this.props}
