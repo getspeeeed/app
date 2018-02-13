@@ -31,28 +31,29 @@ class PasswordField extends Component {
       position: 'absolute',
       top: "50%",
       right: "0",
-      height: "1.6rem",
-      width: "1.6rem",
       transform: "translateY(-50%)",
       cursor: "pointer",
-      zIndex: 10,
     }
     return Object.assign(style, this.props.iconStyle)
   }
 
   render() {
-    let icon = <Hide color={this.props.iconColor} />
+    let icon = <Hide color={this.props.iconColor} style={this.setIconStyle()} onClick={this.toggleVisibility} />
     if (this.state.reveal) {
-      icon = <Show color={this.props.iconColor} />
+      icon = <Show color={this.props.iconColor} style={this.setIconStyle()} onClick={this.toggleVisibility} />
     }
+
+    const props = {...this.props}
+    delete props.iconColor
+    delete props.iconStyle
 
     return (
       <div style={{position: "relative"}}>
         <TextField
-          {...this.props}
+          {...props}
           type={this.state.inputType}
         />
-        <div style={this.setIconStyle()} onClick={this.toggleVisibility}>{icon}</div>
+        {icon}
       </div>
     );
   }
