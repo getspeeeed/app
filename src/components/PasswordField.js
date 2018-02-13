@@ -46,39 +46,11 @@ class PasswordField extends Component {
       icon = <Show fill={this.props.iconColor} />
     }
 
-    // See http://www.material-ui.com/#/components/text-field
-    // Note: If it has a `value` attribute, hint text will be shown after input.
     return (
       <div style={{position: "relative"}}>
         <TextField
-          ref="passwordField"
-          className={this.props.className}
-          defaultValue={this.props.defaultValue}
-          disabled={this.props.disabled}
-          errorStyle={this.props.errorStyle}
-          errorText={this.props.errorText}
-          floatingLabelFixed={this.props.floatingLabelFixed}
-          floatingLabelFocusStyle={this.props.floatingLabelFocusStyle}
-          floatingLabelShrinkStyle={this.props.floatingLabelShrinkStyle}
-          floatingLabelStyle={this.props.floatingLabelStyle}
-          floatingLabelText={this.props.floatingLabelText}
-          fullWidth={this.props.fullWidth}
-          hintStyle={this.props.hintStyle}
-          hintText={this.props.hintText}
-          id={this.props.id}
-          inputStyle={this.props.inputStyle}
-          multiLine={this.props.multiLine}
-          name={this.props.name}
-          onChange={this.props.onChange}
-          rows={this.props.rows}
-          rowsMax={this.props.rowsMax}
-          style={this.props.style}
-          textareaStyle={this.props.textareaStyle}
+          {...this.props}
           type={this.state.inputType}
-          underlineDisabledStyle={this.props.underlineDisabledStyle}
-          underlineFocusStyle={this.props.underlineFocusStyle}
-          underlineShow={this.props.underlineShow}
-          underlineStyle={this.props.underlineStyle}
         />
         <div style={this.setIconStyle()} onClick={this.toggleReveal}>{icon}</div>
       </div>

@@ -30,7 +30,12 @@ class Signup extends Component {
     const email = document.getElementById( 'email' ).value;
     const password = document.getElementById( 'password' ).value;
     firebase.auth().createUserWithEmailAndPassword(email, password).then(() => {
-      window.location.hash = ""
+      const user = firebase.auth().currentUser;
+      user.sendEmailVerification().then(function() {
+        window.location.hash = ""
+      }).catch(function(error) {
+        self.props.Alert(error.message)
+      });
     }).catch((error) => {
       self.props.Alert(error.message)
     })

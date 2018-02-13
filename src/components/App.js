@@ -6,6 +6,8 @@ import Main from './Main';
 import Signin from './Signin';
 import { Snackbar } from 'material-ui';
 
+import './App.css'
+
 firebase.initializeApp(firebaseConfig);
 
 class App extends Component {
@@ -14,7 +16,7 @@ class App extends Component {
     this.state = {
       open: false,
       message: "",
-      user: null,
+      current_user: null,
       loading: true,
     };
   }
@@ -50,7 +52,7 @@ class App extends Component {
   componentDidMount () {
     this.removeListener = firebase.auth().onAuthStateChanged((user) => {
       this.setState({
-        user: user,
+        current_user: user,
         loading: false,
       })
     })
@@ -63,11 +65,11 @@ class App extends Component {
   render() {
     if (this.state.loading) {
       return null;
-    } else if (this.state.user) {
+    } else if (this.state.current_user) {
       return (
         <MuiThemeProvider>
           <div id="app">
-            <Main Alert={this.Alert} Info={this.Info} User={this.state.user} />
+            <Main Alert={this.Alert} Info={this.Info} />
             <Snackbar
               open={ this.state.open }
               message={ this.state.message }
