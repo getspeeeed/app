@@ -46,6 +46,11 @@ class PasswordField extends Component {
     const props = {...this.props}
     delete props.iconColor
     delete props.iconStyle
+    props.style = {
+      boxSizing: "border-box",
+      paddingRight: "30px",
+      ...this.props.style
+    }
 
     return (
       <div style={{position: "relative"}}>
