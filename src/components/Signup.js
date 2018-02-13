@@ -41,6 +41,7 @@ class Signup extends Component {
       <div className="signup">
         <div className="main">
           <h1><img src="./img/logo-white.png" alt="Speeeed" className="logo" /></h1>
+          <h2>Create your account</h2>
           <form>
             <TextField
               id="email"

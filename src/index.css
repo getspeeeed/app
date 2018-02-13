@@ -9,3 +9,8 @@ input:invalid
 {
   box-shadow: none;
 }
+
+p
+{
+  line-height: 1.5em;
+}

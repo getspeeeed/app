@@ -27,6 +27,7 @@ class PasswordReset extends Component {
       <div className="passwordreset">
         <div className="main">
           <h1><img src="./img/logo-white.png" alt="Speeeed" className="logo" /></h1>
+          <h2>Reset your password</h2>
           <form>
             <TextField id="email" type="email" hintText="Email" fullWidth={true} inputStyle={ this.style } hintStyle={ this.hint_style } />
             <RaisedButton className="btn-signin" label="Send password reset email" backgroundColor="#FFC107" fullWidth={true} onClick={ this.sendemail } />
