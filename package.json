@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "material-ui": "^0.20.0",
-    "password-field": "git+https://github.com/miya0001/password-field.git",
+    "password-field": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
