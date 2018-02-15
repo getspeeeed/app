@@ -31,7 +31,7 @@ class SigninForm extends Component {
       <div className="signin-form">
         <div className="main">
           <h1><img src="./img/logo-white.png" alt="Speeeed" className="logo" /></h1>
-          <form>
+          <form autocomplete="off">
             <TextField
               id="email"
               type="email"
@@ -41,14 +41,13 @@ class SigninForm extends Component {
               hintStyle={ this.hint_style }
               required
             />
-            <PasswordField
+            <TextField
               id="password"
               type="password"
               hintText="Password"
               fullWidth={true}
               inputStyle={ this.style }
               hintStyle={ this.hint_style }
-              iconColor="#ffffff"
               required
             />
             <RaisedButton className="btn-signin" label="SIGN IN" primary={true} fullWidth={true} onClick={ this.signin } />
