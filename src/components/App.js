@@ -16,7 +16,7 @@ class App extends Component {
     this.state = {
       open: false,
       message: "",
-      current_user: null,
+      logged_in: null,
       loading: true,
     };
   }
@@ -51,10 +51,17 @@ class App extends Component {
 
   componentDidMount () {
     this.removeListener = firebase.auth().onAuthStateChanged((user) => {
-      this.setState({
-        current_user: user,
-        loading: false,
-      })
+      if (user) {
+        this.setState({
+          logged_in: true,
+          loading: false,
+        })
+      } else {
+        this.setState({
+          logged_in: null,
+          loading: false,
+        })
+      }
     })
   }
 
@@ -65,7 +72,7 @@ class App extends Component {
   render() {
     if (this.state.loading) {
       return null;
-    } else if (this.state.current_user) {
+    } else if (this.state.logged_in) {
       return (
         <MuiThemeProvider>
           <div id="app">
