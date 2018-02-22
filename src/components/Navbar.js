@@ -35,7 +35,8 @@ class NavBar extends Component {
             onRequestChange={() => this.props.onToggle()}
             containerStyle={ this.containerStyle }
           >
-            <MenuItem style={ this.MenuItemStyle }>Hello</MenuItem>
+            <MenuItem style={ this.MenuItemStyle }>https://miya.io/</MenuItem>
+            <MenuItem style={ this.MenuItemStyle }>https://firegoby.jp/</MenuItem>
           </Drawer>
           <AppBar
             title=""
